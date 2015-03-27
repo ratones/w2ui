@@ -2013,7 +2013,8 @@ button.btn-red.clicked {
 */
 .w2ui-popup {
   position: fixed;
-  z-index: 1600;
+  resize: both;
+  z-index: 1100;
   overflow: hidden;
   font-family: Verdana, Arial, sans-serif;
   border-radius: 6px;
@@ -2030,6 +2031,24 @@ button.btn-red.clicked {
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
+}
+.w2ui-popup * {
+  resize: none;
+}
+.w2ui-popup .w2panel-resizer {
+  width: 10px;
+  font-size: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 300;
+  cursor: default;
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  /* Safari and Chrome */
 }
 .w2ui-popup .w2ui-msg-title {
   padding: 6px;
@@ -2088,17 +2107,24 @@ button.btn-red.clicked {
   background-color: #cccccc;
   border: 1px solid #aaaaaa;
 }
+.w2ui-popup .w2ui-msg-min {
+  background-position: 0px 0px;
+}
+.w2ui-popup .w2ui-msg-min:hover {
+  background-color: #cccccc;
+  border: 1px solid #aaaaaa;
+}
 .w2ui-popup .w2ui-box1,
 .w2ui-popup .w2ui-box2 {
   position: absolute;
   left: 0px;
   right: 0px;
   top: 32px;
-  bottom: 55px;
+  bottom: 52px;
   z-index: 100;
 }
 .w2ui-popup .w2ui-msg-body {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 130%;
   padding: 0px 7px 7px 7px;
   color: #000000;
@@ -2109,6 +2135,7 @@ button.btn-red.clicked {
   height: 100%;
 }
 .w2ui-popup .w2ui-popup-message {
+  font-size: 12px;
   position: absolute;
   z-index: 250;
   background-color: #f9f9f9;
@@ -2122,6 +2149,24 @@ button.btn-red.clicked {
   border-top: 0px;
   border-radius: 0px 0px 6px 6px;
   overflow: auto;
+}
+.w2ui-popup .w2ui-popup-message .w2ui-popup-message-body {
+  position: absolute;
+  top: 0px;
+  bottom: 45px;
+  left: 0px;
+  right: 0px;
+  overflow: auto;
+}
+.w2ui-popup .w2ui-popup-message .w2ui-popup-message-buttons {
+  position: absolute;
+  height: 45px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 8px;
 }
 .w2ui-popup .w2ui-msg-buttons {
   padding: 12px;
@@ -2146,6 +2191,29 @@ button.btn-red.clicked {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   bottom: 0px !important;
+}
+.w2ui-popup.inactive {
+  box-shadow: none;
+  border-color: #cccccc;
+  opacity: 0.9 !important;
+}
+.w2ui-popup.w2modal {
+  z-index: 1200 !important;
+}
+.w2taskbar {
+  position: fixed;
+  width: 10000px;
+  height: 35px;
+  bottom: 0;
+  left: 0;
+  z-index: 18000;
+}
+.w2taskbar .w2ui-popup {
+  float: left;
+  margin-right: 5px;
+  position: relative;
+  top: 0 !important;
+  left: 0 !important;
 }
 /*************************************************
 * ---- Sidebar ----
