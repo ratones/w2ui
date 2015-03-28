@@ -8981,7 +8981,7 @@ var w2panel = {};
                     (options.buttons === '' ? ' w2ui-msg-no-buttons' : '') + '" style="' + options.style + '"></div>' +
                     '       </div>' +
                     '   <div class="w2ui-msg-buttons" style="' + (options.buttons === '' ? 'display: none' : '') + '">' + options.buttons + '</div>' +
-                    (options.resizable ? '<div class="w2panel-resizer"></div>' : '') +
+                    (options.resizable ? '<div class="w2panel-resizer"><i class="w2ui-icon-resize"></i></div>' : '') +
                     '</div>';
                 $('body').append(msg);
                 //if (options.modal) {

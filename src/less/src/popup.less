@@ -4,7 +4,8 @@
 
 .w2ui-popup {
     position: fixed;
-    resize: both;
+    /*resize: both;*/
+    
     z-index: 1100;
     overflow: hidden;
     font-family: @main-font-family;
@@ -104,7 +105,9 @@
     .w2ui-msg-body {
         font-size: 12px;
         line-height: 130%;
-        padding: 0px 7px 7px 7px;
+        /*padding: 0px 7px 7px 7px;*/
+        
+        padding: 0;
         color: @popup-body-color;
         background-color: @popup-body-background-color;
         position: absolute;
@@ -177,6 +180,9 @@
 
 .w2ui-popup.w2modal {
     z-index: 1200 !important;
+    .w2ui-msg-body {
+        padding: 0;
+    }
 }
 
 .w2taskbar {
