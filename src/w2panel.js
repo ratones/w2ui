@@ -35,7 +35,10 @@ var w2panel = {};
     $.fn.w2panel = function(method, options) {
         //append taskbar for minimized windows 
         if ($('#w2taskbar-container').length === 0) {
-            $('body').append('<div class="w2taskbar" id="w2taskbar-container"></div>');
+            if ($('#tb_footerToolbar_item_taskbar').length > 0)
+                $('#tb_footerToolbar_item_taskbar').append('<div class="w2taskbar-toolbar" id="w2taskbar-container"></div>');
+            else
+                $('body').append('<div class="w2taskbar" id="w2taskbar-container"></div>');
             // $('body').on('mousedown', function(e) {
             //     e.stopPropagation();
             //     w2panel.focus('none');
